@@ -11,10 +11,14 @@ import com.example.beatboxmvvm.databinding.ListItemSoundBinding
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
+    private lateinit var beatBox: BeatBox
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val binding: ActivityMainBinding =
             DataBindingUtil.setContentView(this, R.layout.activity_main)
+
+        beatBox = BeatBox(assets)
+        beatBox.loadSounds()
 
         binding.recyclerView.apply {
             layoutManager = GridLayoutManager(context, 3)
