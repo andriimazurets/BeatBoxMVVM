@@ -1,1 +1,4 @@
 # BeatBoxMVVM
+### Stack:
+- RecyclerView
+- BeatBox
